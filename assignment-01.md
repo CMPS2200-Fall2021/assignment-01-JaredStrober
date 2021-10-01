@@ -14,21 +14,21 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
 .  
-    Yes, the constant in the $2^{n+1}, 1, does not affect the growth rate of the equation. If you graph both the functions, you can see easily that $2^{n+1} is far within
-    O(2^n)$. If you took the limit of g(n)/F(n) you would arrive at 2*2^n/n^2 <= C which simplifies to 2 <= C. 
+    Yes, the constant in the $2^{n+1}$, 1, does not affect the growth rate of the equation. If you graph both the functions, you can see easily that $2^{n+1}$ is far within
+    $O(2^n)$. If you took the limit of $g(n)/F(n)$ you would arrive at $2*2^n/n^2$ <= C which simplifies to 2 <= C. 
 .  
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
 .  
-    No, as the limit approaches inf. with g(n)/F(n) being 2^2^n/2^n it simplifies to (ln 2)(2^2^n) != C.
+    No, as the limit approaches inf. with $g(n)/F(n)$ being $2^2^n/2^n$ it simplifies to $(ln 2)(2^2^n)$ != C.
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
 .  
-    No, when graphing both functions, you can clearly see that $n^{1.01} is not within O(\mathrm{log}^2 n). Furthermore, iif you work out the math 
-    using L'Hosptials rule, the limit is inf. To see this derivative of g'(n)/f'(n), you end up with 1.01^2*n/2 = 1.01^2/2 * x = inf
+    No, when graphing both functions, you can clearly see that $n^{1.01}$ is not within $O(\mathrm{log}^2 n)$. Furthermore, iif you work out the math 
+    using L'Hosptials rule, the limit is inf. To see this derivative of $g'(n)/f'(n)$, you end up with $1.01^2*n/2 = 1.01^2/2$ * x = inf
 .  
 .  
 
@@ -45,7 +45,7 @@ No, because the limit is inf. If you plug in $\sqrt{n} for g(n) and O((\mathrm{l
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
 .  
-Yes, because 1e is False, by the definition of \Omega and 'big O, $\sqrt{n} is not \in \Omega((\mathrm{log} n)^3)$.
+Yes, because 1e is False, by the definition of $\Omega$ and 'big O, $\sqrt{n}$ is not $\in \Omega((\mathrm{log} n)^3)$.
 .  
 .  
 
@@ -57,7 +57,7 @@ $g(n) \in o(f(n))$ means that for **every** positive constant $c$, there exists 
 
 **Prove** that $o(g(n)) \cap \omega(g(n))$ is the empty set.  
 
-Let f(n) be in $o(g(n)) and f(n) be in \omega(g(n))$.
+Let f(n) be in $o(g(n))$ and f(n) be in $\omega(g(n))$.
 Thus F(n) < c * g(n) and F(n) > c * g(n) for every constant c
 
 So f(n) < g(n) and f(n) < g(n)
