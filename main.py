@@ -21,11 +21,10 @@ def longest_run(mylist, key):
         if num == key:
             curPath += 1
         else:
-            if curLongest < curPath:
-                curLongest = curPath
+            curLongest = max(curLongest, curPath)
             curPath = 0
+    return max(curPath, curLongest)
 
-    return curLongest
 
 
 class Result:
@@ -58,10 +57,9 @@ def longest_run_recursive(mylist, key):
 
 
 def test_longest_run():
-    assert longest_run([2, 12, 12, 8, 12, 12, 12, 0, 12, 1], 12) == 3
+    assert longest_run([12, 12, 12, 8, 12, 12, 0, 12, 1], 12) == 3
+    assert longest_run([12, 12, 12, 8, 12, 12, 0, 12, 12, 12, 12], 12) == 4
 
 
 if __name__ == '__main__':
-    print(longest_run_recursive([1, 2, 5, 5, 3, 1, 2, 4, 3, 2, 2, 2, 2, 3, 6, 5, 5, 6, 3, 1], 2))
-    print(longest_run_recursive([2,2,2,2,2,5,6,6,2,2,2,2,2,2,2,2,2], 2))
-
+    test_longest_run()
